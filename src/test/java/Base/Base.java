@@ -16,7 +16,7 @@ public abstract class Base {
         return driver;
     }
     protected void loginWeb() {
-        driver.get("https://masslooking.cloud/");
+        driver.get("https://www.aetna.com/");
     }
 
     @BeforeClass
