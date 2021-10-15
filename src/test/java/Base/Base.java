@@ -16,7 +16,7 @@ public abstract class Base {
         return driver;
     }
     protected void loginWeb() {
-        driver.get("https://www.aetna.com/");
+        driver.get("https://www.saucedemo.com/");
     }
 
     @BeforeClass
