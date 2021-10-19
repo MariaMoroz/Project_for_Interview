@@ -21,6 +21,9 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//h3")
     private WebElement errorMessage;
 
+    @FindBy(css = ".bot_column")
+    private WebElement picture;
+
     public MainPage(WebDriver driver) {
         super(driver);
     }
@@ -43,5 +46,25 @@ public class MainPage extends BasePage{
     public MainPage fillPasswordField(String value){
         passwordField.sendKeys(value);
         return this;
+    }
+
+    public boolean isLogoDisplayed() {
+
+        return loginLogo.isEnabled();
+    }
+
+    public boolean isPictureDisplayed() {
+
+        return picture.isDisplayed();
+    }
+
+    public boolean isUserNameFieldDisplayed() {
+
+        return userNameField.isDisplayed();
+    }
+
+    public boolean isPasswordFieldDisplayed() {
+
+        return passwordField.isDisplayed();
     }
 }

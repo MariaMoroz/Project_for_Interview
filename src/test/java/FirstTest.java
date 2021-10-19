@@ -8,11 +8,16 @@ public class FirstTest extends Base {
 
     @Test
     public void navigatePage(){
-        String expectedMessage = "Epic sadface: Username is required";
 
-        MainPage mainPage = new MainPage(getDriver())
-                .clickLoginButton();
-        Assert.assertEquals(mainPage.getTextMessage(), expectedMessage);
+        Assert.assertTrue(new MainPage(getDriver())
+                .isLogoDisplayed());
+        Assert.assertTrue(new MainPage(getDriver())
+                .isPictureDisplayed());
+        Assert.assertTrue(new MainPage(getDriver())
+                .isUserNameFieldDisplayed());
+        Assert.assertTrue(new MainPage(getDriver())
+                .isPasswordFieldDisplayed());
+
     }
 
     @Test
